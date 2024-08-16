@@ -119,13 +119,13 @@ function brkLdr()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.674, 146.999, -247.348)
     end
 end
-
+--tab 1
 local Tab = Window:MakeTab({
-	Name = "main",
+	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
+--toggle break
 Tab:AddToggle({
 	Name = "Break??",
 	Default = false,
@@ -134,21 +134,20 @@ Tab:AddToggle({
         brkLdr()
 	end    
 })
-
+--teleport button
 Tab:AddButton({
 	Name = "Teleport to top of ladder",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.674, 146.999, -247.348)
   	end    
 })
-
-
+--tab 2
 local Tab2 = Window:MakeTab({
 	Name = "Player",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
+--slider
 Tab2:AddSlider({
 	Name = "WalkSpeed",
 	Min = 0,
@@ -157,11 +156,11 @@ Tab2:AddSlider({
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "speed",
-	Callback = function(Valuee)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Valuee
+	Callback = function(speed)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
 	end    
 })
-
+--slider
 Tab2:AddSlider({
 	Name = "JumpPower",
 	Min = 0,
@@ -170,11 +169,11 @@ Tab2:AddSlider({
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "power",
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	Callback = function(jump)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
 	end    
 })
-
+--slider
 Tab2:AddSlider({
 	Name = "Gravity",
 	Min = 0,
@@ -183,11 +182,11 @@ Tab2:AddSlider({
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 5,
 	ValueName = "gravity",
-	Callback = function(Valueee)
-		game.Workspace.Gravity = Valueee
+	Callback = function(gravity)
+        game.Workspace.Gravity = gravity
 	end    
 })
-
+--slider
 Tab2:AddSlider({
 	Name = "Field Of View",
 	Min = 1,
@@ -196,34 +195,84 @@ Tab2:AddSlider({
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "FOV",
-	Callback = function(Valuew)
-		game.Workspace.Camera.FieldOfView = Valuew
+	Callback = function(FieldOfView)
+        game.Workspace.Camera.FieldOfView = FieldOfView
 	end    
 })
-
+--tab 3
 local Tab3 = Window:MakeTab({
+	Name = "Server",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+--text
+Tab3:AddParagraph("There's nothing here yet..","wait for v3!")
+--tab 4
+local Tab4 = Window:MakeTab({
+	Name = "Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+--load inf yield
+Tab4:AddButton({
+	Name = "Infinite yield",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+--systembroken
+Tab4:AddButton({
+	Name = "SystemBroken",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+  	end    
+})
+--float
+Tab4:AddButton({
+	Name = "Float",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))("https://t.me/arceusxscripts")
+  	end    
+})
+--dex explorer v2
+Tab4:AddButton({
+	Name = "Dex Explorer v2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
+  	end    
+})
+--tab 5
+local Tab = Window:MakeTab({
+	Name = "Changelog",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+--text
+Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts, serverhop and rejoin  |  16.08.2024")
+Tab:AddParagraph("v3 soon...","spoiler: i'll rewrite the script for breaking the ladder")
+--tab 6
+local Tab6 = Window:MakeTab({
 	Name = "Other",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
-
-local Section = Tab3:AddSection({
+--section
+local Section = Tab6:AddSection({
 	Name = "ENG"
 })
-
-Tab3:AddParagraph("Discord","m1kpee")
-Tab3:AddParagraph("Roblox","@Yaros1979 (m1kp)")
-Tab3:AddParagraph("why are the sliders not working?","Idk, maybe they will work if you run this script on a computer xd")
-Tab3:AddParagraph("Source","Open")
-
-local Section = Tab3:AddSection({
+--text
+Tab6:AddParagraph("Discord","m1kpee")
+Tab6:AddParagraph("Roblox","@Yaros1979 (m1kp)")
+Tab6:AddParagraph("why are the sliders not working?","Idk, maybe they will work if you run this script on a computer xd")
+Tab6:AddParagraph("Source","Open")
+--section
+local Section = Tab6:AddSection({
 	Name = "RUS"
 })
-
-Tab3:AddParagraph("Дискорд","m1kpee")
-Tab3:AddParagraph("Роблокс","@Yaros1979 (m1kp)")
-Tab3:AddParagraph("Почему слайдеры не работают?","Я не знаю, возможно, они будут работать, если запустить этот скрипт на компьютере")
-Tab3:AddParagraph("Источник","Открытый")
+--text
+Tab6:AddParagraph("Дискорд","m1kpee")
+Tab6:AddParagraph("Роблокс","@Yaros1979 (m1kp)")
+Tab6:AddParagraph("Почему слайдеры не работают?","Я не знаю, возможно, они будут работать, если запустить этот скрипт на компьютере")
+Tab6:AddParagraph("Источник","Открытый")
 
 OrionLib:Init()
