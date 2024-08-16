@@ -1,9 +1,9 @@
 --script for everyone!!
---version: v2.1 (NOW)
+--version 2.2 here (now)
+--wait for 2.3, i will add new anti-admin functions
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
-
 --Notify
 OrionLib:MakeNotification({
 	Name = "LadderBreaker loaded",
@@ -11,10 +11,11 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 3
 })
-
+--locals
+local speed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 --Value
 _G.breakLadder = true
-
+_G.antiBlur = true
 --function
 function brkLdr()
     while _G.breakLadder == true do
@@ -121,6 +122,13 @@ function brkLdr()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.674, 146.999, -247.348)
     end
 end
+--deleteblur
+function delblur()
+        while _G.AntiBlur == true do
+                game.Workspace.Camera.Blur:Destroy()
+        end
+end
+
 --tab 1
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -268,12 +276,21 @@ Tab2:AddSlider({
 })
 --tab 3
 local Tab3 = Window:MakeTab({
-	Name = "Server",
+	Name = "Anti-admin",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+--tgl
+Tab3:AddToggle({
+	Name = "Anti-blur",
+	Default = false,
+	Callback = function(Value)
+		_G.AntiBlur = Value
+        delblur()
+	end    
+})
 --text
-Tab3:AddParagraph("There's nothing here yet..","wait for v3!")
+Tab3:AddParagraph("wait for next updates","v2.3 or v3")
 --tab 4
 local Tab4 = Window:MakeTab({
 	Name = "Scripts",
@@ -317,7 +334,8 @@ local Tab = Window:MakeTab({
 --text
 Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts | 16.08.2024")
 Tab:AddParagraph("v2.1","added teleport buttons in main tab | 17.08.2024")
-Tab:AddParagraph("v3 soon...","spoiler: i'll rewrite the script for breaking the ladder")
+Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab | 17.08.2024")
+Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing sky color (visual) and fix all glitches")
 --tab 6
 local Tab6 = Window:MakeTab({
 	Name = "Other",
