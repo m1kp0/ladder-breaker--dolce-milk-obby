@@ -1,9 +1,9 @@
---script for everyone!!
---version 2.2 here (now)
---wait for 2.3, i will add new anti-admin functions
+--script for all!!
+--version: 2.2 (now)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
+
 --Notify
 OrionLib:MakeNotification({
 	Name = "LadderBreaker loaded",
@@ -13,10 +13,13 @@ OrionLib:MakeNotification({
 })
 --locals
 local speed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+local jmpPower = game.Players.LocalPlayer.Character.Humanoid.JumpPower
 --Value
 _G.breakLadder = true
 _G.antiBlur = true
---function
+_G.wlkSpeed = true
+_G.jummpPower = true
+--fnc
 function brkLdr()
     while _G.breakLadder == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(87.624, 3.999, -250.481)
@@ -128,7 +131,20 @@ function delblur()
                 game.Workspace.Camera.Blur:Destroy()
         end
 end
-
+--wlkspeed 16
+function wlkspd()
+        while _G.wlkSpeed == true do
+                wait(0.000001)
+                speed = 16
+        end
+end
+--jpmpower 50
+function jmppwr()
+        while _G.jummpPower == true do
+                wait(0.000001)
+                jmpPower = 50
+        end
+end
 --tab 1
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -280,7 +296,7 @@ local Tab3 = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
---tgl
+--tgls
 Tab3:AddToggle({
 	Name = "Anti-blur",
 	Default = false,
@@ -289,8 +305,24 @@ Tab3:AddToggle({
         delblur()
 	end    
 })
---text
-Tab3:AddParagraph("wait for next updates","v2.3 or v3")
+
+Tab3:AddToggle({
+	Name = "Anti-walkspeed 0 (always 16)",
+	Default = false,
+	Callback = function(Value)
+		_G.wlkSpeed = Value
+        wlkspd()
+	end    
+})
+
+Tab3:AddToggle({
+	Name = "Anti-jumppower 0 (always 50)",
+	Default = false,
+	Callback = function(Value)
+		_G.jummpPower = Value
+        jmppwr()
+	end    
+})
 --tab 4
 local Tab4 = Window:MakeTab({
 	Name = "Scripts",
@@ -334,7 +366,7 @@ local Tab = Window:MakeTab({
 --text
 Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts | 16.08.2024")
 Tab:AddParagraph("v2.1","added teleport buttons in main tab | 17.08.2024")
-Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab | 17.08.2024")
+Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions | 17.08.2024")
 Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing sky color (visual) and fix all glitches")
 --tab 6
 local Tab6 = Window:MakeTab({
@@ -349,7 +381,7 @@ local Section = Tab6:AddSection({
 --text
 Tab6:AddParagraph("Discord","m1kpee")
 Tab6:AddParagraph("Roblox","@Yaros1979 (m1kp)")
-Tab6:AddParagraph("why are the sliders not working?","Idk, maybe they will work if you run this script on a computer xd")
+Tab6:AddParagraph("why are the sliders not working?","Idk, maybe they will work if you run this script on a computer, lol")
 Tab6:AddParagraph("Source","Open")
 --section
 local Section = Tab6:AddSection({
@@ -358,7 +390,7 @@ local Section = Tab6:AddSection({
 --text
 Tab6:AddParagraph("Дискорд","m1kpee")
 Tab6:AddParagraph("Роблокс","@Yaros1979 (m1kp)")
-Tab6:AddParagraph("Почему слайдеры не работают?","Я не знаю, возможно, они будут работать, если запустить этот скрипт на компьютере")
+Tab6:AddParagraph("Почему слайдеры не работают?","Я не знаю, возможно, они будут работать, если запустить этот скрипт на компьютере, лол")
 Tab6:AddParagraph("Источник","Открытый")
 
 OrionLib:Init()
