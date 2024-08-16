@@ -1,5 +1,5 @@
 --script for everyone!!
---version: v2 (NOW)
+--version: v2.1 (NOW)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -127,6 +127,10 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+--section
+local Section = Tab:AddSection({
+	Name = "Toggle break"
+})
 --toggle break
 Tab:AddToggle({
 	Name = "Break??",
@@ -136,13 +140,74 @@ Tab:AddToggle({
         brkLdr()
 	end    
 })
---teleport button
+--section
+local Section = Tab:AddSection({
+	Name = "Teleport"
+})
+--btns
 Tab:AddButton({
-	Name = "Teleport to top of ladder",
+	Name = "Top of the ladder",
 	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.674, 146.999, -247.348)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80, 147, -247)
   	end    
 })
+
+Tab:AddButton({
+	Name = "Green zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70, 100, -469)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Yellow zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41, 106, -775)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Pink zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3, 188, -1188)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Purple zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25, 192, -1534)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Orange zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82, 282, -1824)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dark-yellow zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-122, 264, -2145)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Blue zone",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-204, 264, -2620)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "End",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-238, 265, -2809)
+  	end    
+})
+
 --tab 2
 local Tab2 = Window:MakeTab({
 	Name = "Player",
@@ -250,7 +315,8 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 --text
-Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts, serverhop and rejoin  |  16.08.2024")
+Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts | 16.08.2024")
+Tab:AddParagraph("v2.1","added teleport buttons in main tab | 17.08.2024")
 Tab:AddParagraph("v3 soon...","spoiler: i'll rewrite the script for breaking the ladder")
 --tab 6
 local Tab6 = Window:MakeTab({
