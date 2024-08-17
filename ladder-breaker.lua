@@ -19,6 +19,7 @@ _G.antiBlur = true
 _G.wlkSpeed = true
 _G.jummpPower = true
 _G.brkspeed = brkspd
+_G.timeclock = clcktm
 --fnc
 function brkLdr()
     while _G.breakLadder == true do
@@ -130,6 +131,10 @@ function delblur()
         while _G.AntiBlur == true do
                 game.Workspace.Camera.Blur:Destroy()
         end
+end
+--time
+function clcktm()
+        game.Lighting.ClockTime = _G.timeclock
 end
 --tab 1
 local Tab = Window:MakeTab({
@@ -376,6 +381,15 @@ Tabclock:AddButton({
 	Callback = function()
       		game.Workspace.Lighting.ClockTime = 18
   	end    
+})
+
+Tab:AddTextbox({
+	Name = "Time",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(clcktm)
+                _G.timeclock = clcktm
+	end	  
 })
 
 --tabtt
