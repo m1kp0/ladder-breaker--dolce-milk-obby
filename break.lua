@@ -1,5 +1,5 @@
 --script for all!!
---version: 2.2 (now)
+--version: 2.3 (now)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -11,9 +11,6 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 3
 })
---locals
-local speed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
-local jmpPower = game.Players.LocalPlayer.Character.Humanoid.JumpPower
 --Value
 _G.breakLadder = true
 _G.antiBlur = true
@@ -23,105 +20,105 @@ _G.jummpPower = true
 function brkLdr()
     while _G.breakLadder == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(87.624, 3.999, -250.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.624, 7.999, -255.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(95.624, 12.999, -260.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100.624, 15.999, -263.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(110.624, 20.999, -265.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.624, 30.999, -256.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(127.624, 35.999, -250.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125.624, 40.999, -240.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.624, 45.999, -232.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(113.624, 50.999, -227.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(104.624, 56.999, -227.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.624, 60.999, -226.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94.624, 63.999, -230.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.624, 70.999, -242.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88.624, 72.999, -245.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88.624, 74.999, -248.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(87.624, 76.999, -250.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88.624, 80.999, -259.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.624, 81.999, -259.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(92.624, 82.999, -259.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(96.624, 86.999, -261.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100.624, 88.999, -262.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(104.624, 89.999, -263.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(107.624, 91.999, -264.481)
-        wait(0.000001)  
+        wait()  
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(110.624, 92.999, -265.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(113.624, 94.999, -265.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(115.624, 95.999, -265.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(118.624, 98.999, -263.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.624, 99.999, -262.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(123.624, 101.999, -258.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(124.624, 104.999, -256.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125.624, 105.999, -252.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.624, 108.999, -248.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.624, 110.999, -245.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125.624, 110.999, -240.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(124.624, 115.999, -235.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.674, 119.999, -233.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(115.674, 122.999, -230.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(110.674, 125.999, -225.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(103.674, 130.999, -227.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(105.674, 127.999, -227.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(110.674, 127.999, -222.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.674, 135.999, -230.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(106.674, 130.999, -234.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(103.674, 129.999, -233.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(93.944, 134.999, -230.479)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(96.8, 132.999, -228.479)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.624, 129.999, -226.481)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.417, 137.999, -234.328)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88.674, 140.999, -237.348)
-        wait(0.000001)
+        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.674, 146.999, -247.348)
     end
 end
@@ -129,20 +126,6 @@ end
 function delblur()
         while _G.AntiBlur == true do
                 game.Workspace.Camera.Blur:Destroy()
-        end
-end
---wlkspeed 16
-function wlkspd()
-        while _G.wlkSpeed == true do
-                wait(0.000001)
-                speed = 16
-        end
-end
---jpmpower 50
-function jmppwr()
-        while _G.jummpPower == true do
-                wait(0.000001)
-                jmpPower = 50
         end
 end
 --tab 1
@@ -155,15 +138,18 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Toggle break"
 })
+--text
+Tab:AddParagraph("invisible breaking (need systembroken)","just attach other player (u can do: headsit, backpack, bang, stand, doggy, drag)")
 --toggle break
 Tab:AddToggle({
-	Name = "Break??",
+	Name = "Break ladder",
 	Default = false,
 	Callback = function(Value)
 		_G.breakLadder = Value
         brkLdr()
 	end    
 })
+
 --section
 local Section = Tab:AddSection({
 	Name = "Teleport"
@@ -248,7 +234,7 @@ Tab2:AddSlider({
 	Increment = 1,
 	ValueName = "speed",
 	Callback = function(speed)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
 	end    
 })
 --slider
@@ -261,8 +247,8 @@ Tab2:AddSlider({
 	Increment = 1,
 	ValueName = "power",
 	Callback = function(jump)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
-	end    
+                game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
+        end
 })
 --slider
 Tab2:AddSlider({
@@ -274,7 +260,7 @@ Tab2:AddSlider({
 	Increment = 5,
 	ValueName = "gravity",
 	Callback = function(gravity)
-        game.Workspace.Gravity = gravity
+                game.Workspace.Gravity = gravity
 	end    
 })
 --slider
@@ -287,7 +273,7 @@ Tab2:AddSlider({
 	Increment = 1,
 	ValueName = "FOV",
 	Callback = function(FieldOfView)
-        game.Workspace.Camera.FieldOfView = FieldOfView
+                game.Workspace.Camera.FieldOfView = FieldOfView
 	end    
 })
 --tab 3
@@ -304,25 +290,7 @@ Tab3:AddToggle({
 		_G.AntiBlur = Value
         delblur()
 	end    
-})
-
-Tab3:AddToggle({
-	Name = "Anti-walkspeed 0 (always 16)",
-	Default = false,
-	Callback = function(Value)
-		_G.wlkSpeed = Value
-        wlkspd()
-	end    
-})
-
-Tab3:AddToggle({
-	Name = "Anti-jumppower 0 (always 50)",
-	Default = false,
-	Callback = function(Value)
-		_G.jummpPower = Value
-        jmppwr()
-	end    
-})
+}) 
 --tab 4
 local Tab4 = Window:MakeTab({
 	Name = "Scripts",
@@ -367,6 +335,7 @@ local Tab = Window:MakeTab({
 Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts | 16.08.2024")
 Tab:AddParagraph("v2.1","added teleport buttons in main tab | 17.08.2024")
 Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions | 17.08.2024")
+Tab:AddParagraph("v2.3","faster breaking ladder, invis breaking (need systembroken), deleted two anti-admin functions (not working)")
 Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing sky color (visual) and fix all glitches")
 --tab 6
 local Tab6 = Window:MakeTab({
