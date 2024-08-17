@@ -339,6 +339,13 @@ Tab4:AddButton({
         loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))("https://t.me/arceusxscripts")
   	end    
 })
+--shaders
+Tab4:AddButton({
+	Name = "Dex Explorer v2",
+	Callback = function()
+loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))("t.me/arceusxscripts")
+  	end    
+})
 --dex explorer v2
 Tab4:AddButton({
 	Name = "Dex Explorer v2",
