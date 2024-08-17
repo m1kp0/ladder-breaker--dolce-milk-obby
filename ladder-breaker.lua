@@ -339,7 +339,7 @@ local Tabclock = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Clock time","Only you can see night/morning/evening")
+Tabclock:AddParagraph("Clock time","Only you can see night/morning/evening")
 
 Tabclock:AddButton({
 	Name = "Night",
