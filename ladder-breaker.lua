@@ -1,5 +1,5 @@
 --script for all!!
---version: 2.4 (now)
+--version: 2.5 (BETA)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -19,7 +19,6 @@ _G.antiBlur = true
 _G.wlkSpeed = true
 _G.jummpPower = true
 _G.brkspeed = brkspd
-_G.timeclock = clcktm
 --fnc
 function brkLdr()
     while _G.breakLadder == true do
@@ -146,7 +145,7 @@ local Tab = Window:MakeTab({
 Tab:AddParagraph("invisible breaking (need systembroken)","just attach other player (u can do: headsit, backpack, bang, stand, doggy, drag)")
 --toggle break
 Tab:AddToggle({
-	Name = "Break ladder (ultra fast)",
+	Name = "Break ladder",
 	Default = false,
 	Callback = function(Value)
 		_G.breakLadder = Value
@@ -161,6 +160,9 @@ Tab:AddTextbox({
                 _G.brkspeed = brkspd
 	end	  
 })
+--text
+Tab:AddParagraph("invisible breaking (need systembroken)","just attach other player (u can do: headsit, backpack, bang, stand, doggy, drag)")
+Tab:AddParagraph("Speed","lower num = speeder breaking, higher num = slower")
 --teleporttab
 local Tab7 = Window:MakeTab({
 	Name = "Teleport",
@@ -381,16 +383,6 @@ Tabclock:AddButton({
 	Callback = function()
       		game.Workspace.Lighting.ClockTime = 18
   	end    
-})
-
-Tabclock:AddTextbox({
-	Name = "Time",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(clcktm)
-                _G.timeclock = clcktm
-                clcktme()
-	end	  
 })
 
 --tabtt
