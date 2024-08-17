@@ -312,20 +312,6 @@ Tab3:AddToggle({
         delblur()
 	end    
 }) 
---wlkspeed
-Tab4:AddButton({
-	Name = "Walk-speed default (16)",
-	Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-  	end    
-})
---jumppower
-Tab4:AddButton({
-	Name = "Jump-power default (50)",
-	Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-  	end    
-})
 --tab 4
 local Tab4 = Window:MakeTab({
 	Name = "Scripts",
