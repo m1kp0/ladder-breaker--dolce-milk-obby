@@ -312,6 +312,20 @@ Tab3:AddToggle({
         delblur()
 	end    
 }) 
+--wlkspeed
+Tab4:AddButton({
+	Name = "Walk-speed default (16)",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+  	end    
+})
+--jumppower
+Tab4:AddButton({
+	Name = "Jump-power default (50)",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+  	end    
+})
 --tab 4
 local Tab4 = Window:MakeTab({
 	Name = "Scripts",
@@ -402,7 +416,7 @@ Tab:AddParagraph("v2.1","added: teleport buttons in main tab")
 Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions")
 Tab:AddParagraph("v2.3","added: faster breaking ladder, invis breaking (need systembroken), deleted two anti-admin functions (not working)")
 Tab:AddParagraph("v2.4","added: teleport tab")
-Tab:AddParagraph("v2.5","added: breaking speed changer, time changer")
+Tab:AddParagraph("v2.5","added: breaking speed changer, time changer, walk speed button, jump power button")
 Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing clocktime")
 --tab 6
 local Tab6 = Window:MakeTab({
