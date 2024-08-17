@@ -1,5 +1,5 @@
 --script for all!!
---version: 2.4 (now)
+--version: 2.5 (BETA)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
