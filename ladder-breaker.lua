@@ -141,8 +141,6 @@ local Tab = Window:MakeTab({
         Image = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
---text
-Tab:AddParagraph("invisible breaking (need systembroken)","just attach other player (u can do: headsit, backpack, bang, stand, doggy, drag)")
 --toggle break
 Tab:AddToggle({
 	Name = "Break ladder",
@@ -360,28 +358,28 @@ Tabclock:AddParagraph("Clock time","Only you can see night/morning/evening")
 Tabclock:AddButton({
 	Name = "Night",
 	Callback = function()
-      		game.Workspace.Lighting.ClockTime = 0
+      		game.Lighting.ClockTime = 0
   	end    
 })
 
 Tabclock:AddButton({
 	Name = "Day",
 	Callback = function()
-      		game.Workspace.Lighting.ClockTime = 12
+      		game.Lighting.ClockTime = 12
   	end    
 })
 
 Tabclock:AddButton({
 	Name = "Morning",
 	Callback = function()
-      		game.Workspace.Lighting.ClockTime = 6
+      		game.Lighting.ClockTime = 6
   	end    
 })
 
 Tabclock:AddButton({
 	Name = "Evening",
 	Callback = function()
-      		game.Workspace.Lighting.ClockTime = 18
+      		game.Lighting.ClockTime = 18
   	end    
 })
 
@@ -397,6 +395,7 @@ Tab:AddParagraph("v2.1","added: teleport buttons in main tab")
 Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions")
 Tab:AddParagraph("v2.3","added: faster breaking ladder, invis breaking (need systembroken), deleted two anti-admin functions (not working)")
 Tab:AddParagraph("v2.4","added: teleport tab")
+Tab:AddParagraph("v2.5","added: breaking speed changer, time changer")
 Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing clocktime")
 --tab 6
 local Tab6 = Window:MakeTab({
