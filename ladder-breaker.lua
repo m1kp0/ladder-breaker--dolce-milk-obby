@@ -1,5 +1,5 @@
 --script for all!!
---version: 2.5 (BETA)
+--version: 2.4 (now)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -389,6 +389,7 @@ Tabclock:AddTextbox({
 	TextDisappear = true,
 	Callback = function(clcktm)
                 _G.timeclock = clcktm
+                clcktm()
 	end	  
 })
 
