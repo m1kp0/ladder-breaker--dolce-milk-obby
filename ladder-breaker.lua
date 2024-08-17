@@ -133,7 +133,7 @@ function delblur()
         end
 end
 --time
-function clcktm()
+function clcktme()
         game.Lighting.ClockTime = _G.timeclock
 end
 --tab 1
@@ -389,7 +389,7 @@ Tabclock:AddTextbox({
 	TextDisappear = true,
 	Callback = function(clcktm)
                 _G.timeclock = clcktm
-                clcktm()
+                clcktme()
 	end	  
 })
 
