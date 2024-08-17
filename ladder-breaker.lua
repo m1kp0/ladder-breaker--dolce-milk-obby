@@ -341,7 +341,7 @@ Tab4:AddButton({
 })
 --shaders
 Tab4:AddButton({
-	Name = "Dex Explorer v2",
+	Name = "Shaders",
 	Callback = function()
 loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))("t.me/arceusxscripts")
   	end    
