@@ -1,5 +1,5 @@
 --script for all!!
---version: 2.3 (now)
+--version: 2.4 (now)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -13,6 +13,8 @@ OrionLib:MakeNotification({
 })
 --Value
 _G.breakLadder = true
+_G.breakLadder2 = true
+_G.breakLadder3 = true
 _G.antiBlur = true
 _G.wlkSpeed = true
 _G.jummpPower = true
@@ -131,87 +133,92 @@ end
 --tab 1
 local Tab = Window:MakeTab({
 	Name = "Main",
-	Icon = "rbxassetid://4483345998",
+        Image = "rbxassetid://4483345998",
 	PremiumOnly = false
-})
---section
-local Section = Tab:AddSection({
-	Name = "Toggle break"
 })
 --text
 Tab:AddParagraph("invisible breaking (need systembroken)","just attach other player (u can do: headsit, backpack, bang, stand, doggy, drag)")
 --toggle break
 Tab:AddToggle({
-	Name = "Break ladder",
+	Name = "Break ladder (ultra fast)",
 	Default = false,
 	Callback = function(Value)
 		_G.breakLadder = Value
         brkLdr()
 	end    
 })
-
---section
-local Section = Tab:AddSection({
-	Name = "Teleport"
+--teleporttab
+local Tab7 = Window:MakeTab({
+	Name = "Teleport",
+        Image = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
+
 --btns
-Tab:AddButton({
+Tab7:AddButton({
+	Name = "Spawn",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(91, 3, -26)
+  	end    
+})
+
+Tab7:AddButton({
 	Name = "Top of the ladder",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80, 147, -247)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Green zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70, 100, -469)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Yellow zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41, 106, -775)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Pink zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3, 188, -1188)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Purple zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25, 192, -1534)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Orange zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82, 282, -1824)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Dark-yellow zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-122, 264, -2145)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "Blue zone",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-204, 264, -2620)
   	end    
 })
 
-Tab:AddButton({
+Tab7:AddButton({
 	Name = "End",
 	Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-238, 265, -2809)
@@ -221,7 +228,7 @@ Tab:AddButton({
 --tab 2
 local Tab2 = Window:MakeTab({
 	Name = "Player",
-	Icon = "rbxassetid://4483345998",
+        Image = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 --slider
@@ -279,7 +286,7 @@ Tab2:AddSlider({
 --tab 3
 local Tab3 = Window:MakeTab({
 	Name = "Anti-admin",
-	Icon = "rbxassetid://4483345998",
+        Image = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 --tgls
@@ -294,7 +301,7 @@ Tab3:AddToggle({
 --tab 4
 local Tab4 = Window:MakeTab({
 	Name = "Scripts",
-	Icon = "rbxassetid://4483345998",
+        Image = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 --load inf yield
@@ -328,19 +335,20 @@ Tab4:AddButton({
 --tab 5
 local Tab = Window:MakeTab({
 	Name = "Changelog",
-	Icon = "rbxassetid://4483345998",
+        Image = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 --text
-Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts | 16.08.2024")
-Tab:AddParagraph("v2.1","added teleport buttons in main tab | 17.08.2024")
-Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions | 17.08.2024")
-Tab:AddParagraph("v2.3","faster breaking ladder, invis breaking (need systembroken), deleted two anti-admin functions (not working)")
-Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing sky color (visual) and fix all glitches")
+Tab:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts")
+Tab:AddParagraph("v2.1","added: teleport buttons in main tab")
+Tab:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions")
+Tab:AddParagraph("v2.3","added: faster breaking ladder, invis breaking (need systembroken), deleted two anti-admin functions (not working)")
+Tab:AddParagraph("v2.4","added: teleport tab")
+Tab:AddParagraph("v3 soon...","spoiler: new breaking-ladder script (break FULL ladder), new scripts, changing clocktime")
 --tab 6
 local Tab6 = Window:MakeTab({
 	Name = "Other",
-	Icon = "rbxassetid://4483345998",
+        Image = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 --section
