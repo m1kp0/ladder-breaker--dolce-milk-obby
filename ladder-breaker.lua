@@ -1,7 +1,7 @@
 while true do
-    for i,v in pairs(game.Workspace()) do
+    for i,v in pairs(game:GetDescendants()) do
         if v.Name == '61' then
-            v.Vector3 = game.Players.LocalPlayer.HumanoidRootPart.Position
+            v.CFrame = game:GetService("Workspace").LYBLY_COCATb6969.HumanoidRootPart.CFrame
         end
     end
 end
