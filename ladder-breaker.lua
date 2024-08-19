@@ -1,8 +1,6 @@
+local ds = game.Workspace.Stairs:GetDescendands()
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 while true do
-    for i,v in pairs(game.Workspace.Stairs:GetDescendands()) do
-        if v.Name == 'Stairs' then
-            v.CFrame = game:GetService("Workspace").LYBLY_COCATb6969.HumanoidRootPart.CFrame
-            wait(0.1)
-        end
-    end
+    ds.CFrame = plr
+    wait(1)
 end
