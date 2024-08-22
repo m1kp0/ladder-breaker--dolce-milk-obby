@@ -59,7 +59,7 @@ Tab:AddTextbox({
 Tab:AddButton({
 	Name = "Copy link",
 	Callback = function()
-            setClipboardText("https://ify.ac/1M3C")
+        clipboard("https://ify.ac/1M3C")
   	end    
 })
 
