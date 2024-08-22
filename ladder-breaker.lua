@@ -47,17 +47,17 @@ TabKey:AddTextbox({
 TabKey:AddButton({
 	Name = "Check key",
 	Callback = function()
-      	if
+        if _G.KeyInput == _G.Key then
+            CorrectKeyNotify()
+            makeLB()
+        else
+            IncorrectKeyNotify()
   	end    
 })
 
 TabKey:AddButton({
 	Name = "Copy link",
 	Callback = function()
-        if _G.KeyInput == _G.Key then
-            CorrectKeyNotify()
-            makeLB()
-        else
-            IncorrectKeyNotify()
+      	print("hi")
   	end    
 })
