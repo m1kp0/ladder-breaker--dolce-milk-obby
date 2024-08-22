@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 Local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, IntroText = "Loading.."})
+local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
 	Name = "Logged In",
@@ -60,4 +60,3 @@ KeySystem:AddButton({
         end
     end    
 })
-
