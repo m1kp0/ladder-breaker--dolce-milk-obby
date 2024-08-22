@@ -56,7 +56,7 @@ Tab:AddTextbox({
 	end	  
 })
 
-MainTab:AddParagraph("How to get key?","copy this link")
+Tab:AddParagraph("How to get key?","copy this link")
 
 Tab:AddTextbox({
 	Name = "link",
