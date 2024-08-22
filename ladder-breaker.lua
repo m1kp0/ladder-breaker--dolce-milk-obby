@@ -1,34 +1,45 @@
 --lib
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
---tab
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = false, SaveConfig = true, IntroText = "LB - Welcome" ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Logged in",
+	Content = "You are logged in as "..Player.Name.."",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+_G.Key = "m1kpeeGotTheMoney"
+_G.KeyInput = "e"
+
+function makeLB()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
+end
+
+function correctKeyNotify()
+    OrionLib:MakeNotification({
+        Name = "Correct key",
+        Content = "Entered correct key!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+function IncorrectKeyNotify()
+    OrionLib:MakeNotification({
+        Name = "Incorrect key",
+        Content = "Entered incorrect key!",
+        Image = "rbxassetid://4483345998",
+        Time = 8
+    })
+end
+
 local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
---key
-_G.Key = "m1kpeeGotTheMoney"
-_G.KeyInput = "string"
---correct key
-function crk()
-    game.GetService("CoreGui").OrionLib:Destroy()
-    OrionLib:MakeNotification({
-        Name = "Correct key!",
-        Content = "You are entered correct key",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-    })
-end
---incorrect key
-function INcrk()
-    OrionLib:MakeNotification({
-        Name = "Incorrect key!",
-        Content = "get key",
-        Image = "rbxassetid://4483345998",
-        Time = 10
-    })
-end
 
 Tab:AddTextbox({
 	Name = "Enter key",
@@ -36,6 +47,12 @@ Tab:AddTextbox({
 	TextDisappear = true,
 	Callback = function(Value)
 		_G.KeyInput = Value
+        if _G.KeyInput == _G.Key then
+            correctKeyNotify()
+            makeLB()
+        else
+            IncorrectKeyNotify()
+        end
 	end	  
 })
 
@@ -43,10 +60,13 @@ Tab:AddButton({
 	Name = "Check key",
 	Callback = function()
       		if _G.KeyInput == _G.Key then
-                crk()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
+                correctKeyNotify()
+                makeLB()
             else
-                INcrk()
+                IncorrectKeyNotify()
             end
   	end    
 })
+
+
+
