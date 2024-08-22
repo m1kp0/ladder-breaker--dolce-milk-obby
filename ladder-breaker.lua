@@ -43,7 +43,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddTextbox({
 	Name = "Enter key",
-	Default = "",
+	Default = "https://ify.ac/1M5f",
 	TextDisappear = true,
 	Callback = function(Value)
 		_G.KeyInput = Value
@@ -56,12 +56,13 @@ Tab:AddTextbox({
 	end	  
 })
 
-Tab:AddButton({
-	Name = "Copy link",
-	Callback = function()
-        clipboard("https://ify.ac/1M3C")
-  	end    
+Tab:AddTextbox({
+	Name = "How to get key?",
+	Default = "https://rutube.ru/video/51db7ad74132a0ca188191e0bbe6c006/",
+	TextDisappear = true,
+	Callback = function(Value)
+        print("how to get key???????????????????????????")
+	end	  
 })
-
 
 
