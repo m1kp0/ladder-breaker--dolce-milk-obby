@@ -56,8 +56,10 @@ Tab:AddTextbox({
 	end	  
 })
 
+MainTab:AddParagraph("How to get key?","copy this link")
+
 Tab:AddTextbox({
-	Name = "How to get key?",
+	Name = "link",
 	Default = "https://rutube.ru/video/51db7ad74132a0ca188191e0bbe6c006/",
 	TextDisappear = true,
 	Callback = function(Value)
