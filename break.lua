@@ -10,7 +10,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-_G.Key = "WhoeverMoveIsGay"
+_G.Key = "WhoeverReadIsGay"
 _G.KeyInput = "e"
 
 function makeLB()
