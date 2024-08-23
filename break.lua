@@ -1,393 +1,72 @@
---script for all!!
---version: 2.6 here!
+--v3 here
+
+--lib
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = false, SaveConfig = true, IntroText = "LB - Welcome", ConfigFolder = "OrionTest"})
 
-local Window = OrionLib:MakeWindow({Name = "LadderBreaker - dolce milk obby", HidePremium = false, IntroEnabled = true, IntroText = "Loading..", SaveConfig = true, ConfigFolder = "OrionTest"})
-
---Notify
 OrionLib:MakeNotification({
-	Name = "LadderBreaker loaded",
-	Content = "created by @Yaros1979 (roblox)",
+	Name = "Logged in",
+	Content = "You are logged in as "..Player.Name.."",
 	Image = "rbxassetid://4483345998",
-	Time = 3
+	Time = 5
 })
---Value
-_G.breakLadder = true
-_G.breakLadder2 = true
-_G.breakLadder3 = true
-_G.antiBlur = true
-_G.wlkSpeed = true
-_G.jummpPower = true
-_G.brkspeed = brkspd
---fnc
-function brkLdr()
-    while _G.breakLadder == true do
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88, 141, -237)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90, 140, -234)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(92, 137, -231)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94, 136, -230)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(95, 135, -228)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97, 134, -226)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100, 132, -224)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(105, 129, -226)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(109, 127, -228)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111, 125, -227)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(113, 124, -226)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(115, 123, -226)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(118, 122, -227)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(118, 121, -228)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120, 120, -229)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(123, 118, -232)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 116, -234)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126, 114, -237)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 113, -239)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 112, -241)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 112, -244)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(124, 111, -247)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(124, 109, -250)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(123, 107, -253)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(123, 105, -256)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(121, 103, -259)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120, 101, -261)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(117, 99, -264)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(115, 97, -265)
-        wait()
-        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(113, 95, -265)
-        wait()
-    end
+
+_G.Key = "WhoeverReadIsGay"
+_G.KeyInput = "e"
+
+function makeLB()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
 end
---deleteblur
-function delblur()
-        while _G.AntiBlur == true do
-                game.Workspace.Camera.Blur:Destroy()
-        end
+
+function correctKeyNotify()
+    OrionLib:MakeNotification({
+        Name = "Correct key",
+        Content = "Entered correct key!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
 end
---time
-function clcktme()
-        game.Lighting.ClockTime = _G.timeclock
+
+function IncorrectKeyNotify()
+    OrionLib:MakeNotification({
+        Name = "Incorrect key",
+        Content = "Entered incorrect key!",
+        Image = "rbxassetid://4483345998",
+        Time = 8
+    })
 end
---tab 1
+
 local Tab = Window:MakeTab({
 	Name = "Main",
-        Image = "rbxassetid://4483345998",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
---toggle break
-Tab:AddToggle({
-	Name = "Break ladder",
-	Default = false,
-	Callback = function(Value)
-		_G.breakLadder = Value
-        brkLdr()
-	end    
-})
+
 Tab:AddTextbox({
-	Name = "delay",
-	Default = "",
+	Name = "Enter key",
+	Default = "https://ify.ac/1M5f",
 	TextDisappear = true,
-	Callback = function(brkspd)
-                _G.brkspeed = brkspd
+	Callback = function(Value)
+		_G.KeyInput = Value
+        if _G.KeyInput == _G.Key then
+            correctKeyNotify()
+            makeLB()
+        else
+            IncorrectKeyNotify()
+        end
 	end	  
 })
---text
-Tab:AddParagraph("WARNING","new gamepass: the main admin, THEY CAN KICK AND BAN PEOPLE!!")
-Tab:AddParagraph("invisible breaking (need systembroken)","just attach other player (u can do: headsit, backpack, bang, stand, doggy, drag)")
-Tab:AddParagraph("Speed","lower num = speeder breaking, higher num = slower")
---teleporttab
-local Tab7 = Window:MakeTab({
-	Name = "Teleport",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 
---btns
-Tab7:AddButton({
-	Name = "Spawn",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(91, 3, -26)
-  	end    
-})
+Tab:AddParagraph("How to get key?","copy this link")
 
-Tab7:AddButton({
-	Name = "Top of the ladder",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80, 147, -247)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Green zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70, 100, -469)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Yellow zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41, 106, -775)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Pink zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3, 188, -1188)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Purple zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25, 192, -1534)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Orange zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82, 282, -1824)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Dark-yellow zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-122, 264, -2145)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "Blue zone",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-204, 264, -2620)
-  	end    
-})
-
-Tab7:AddButton({
-	Name = "End",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-238, 265, -2809)
-  	end    
-})
-
---tab 2
-local Tab2 = Window:MakeTab({
-	Name = "Player",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
---slider
-Tab2:AddSlider({
-	Name = "WalkSpeed",
-	Min = 0,
-	Max = 200,
-	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "speed",
-	Callback = function(speed)
-                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
-	end    
-})
---slider
-Tab2:AddSlider({
-	Name = "JumpPower",
-	Min = 0,
-	Max = 200,
-	Default = 50,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "power",
-	Callback = function(jump)
-                game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
-        end
-})
---slider
-Tab2:AddSlider({
-	Name = "Gravity",
-	Min = 0,
-	Max = 1000,
-	Default = 180,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 5,
-	ValueName = "gravity",
-	Callback = function(gravity)
-                game.Workspace.Gravity = gravity
-	end    
-})
---slider
-Tab2:AddSlider({
-	Name = "Field Of View",
-	Min = 1,
-	Max = 120,
-	Default = 70,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "FOV",
-	Callback = function(FieldOfView)
-                game.Workspace.Camera.FieldOfView = FieldOfView
-	end    
-})
---tab 3
-local Tab3 = Window:MakeTab({
-	Name = "Anti-admin",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
---tgls
-Tab3:AddToggle({
-	Name = "Anti-blur",
-	Default = false,
+Tab:AddTextbox({
+	Name = "link",
+	Default = "https://rutube.ru/video/51db7ad74132a0ca188191e0bbe6c006/",
+	TextDisappear = true,
 	Callback = function(Value)
-		_G.AntiBlur = Value
-        delblur()
-	end    
-}) 
---tab 4
-local Tab4 = Window:MakeTab({
-	Name = "Scripts",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
---load inf yield
-Tab4:AddButton({
-	Name = "Infinite yield",
-	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-  	end    
-})
---systembroken
-Tab4:AddButton({
-	Name = "SystemBroken",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
-  	end    
-})
---float
-Tab4:AddButton({
-	Name = "Float",
-	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))("https://t.me/arceusxscripts")
-  	end    
-})
---shaders
-Tab4:AddButton({
-	Name = "Shaders",
-	Callback = function()
-loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))("t.me/arceusxscripts")
-  	end    
-})
---dex explorer v2
-Tab4:AddButton({
-	Name = "Dex Explorer v2",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
-  	end    
-})
---tab 5
-local Tabclock = Window:MakeTab({
-	Name = "Time",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
---time
-Tabclock:AddButton({
-	Name = "Night",
-	Callback = function()
-      		game.Lighting.ClockTime = 0
-  	end    
+        print("how to get key???????????????????????????")
+	end	  
 })
 
-Tabclock:AddButton({
-	Name = "Day",
-	Callback = function()
-      		game.Lighting.ClockTime = 12
-  	end    
-})
 
-Tabclock:AddButton({
-	Name = "Morning",
-	Callback = function()
-      		game.Lighting.ClockTime = 6
-  	end    
-})
-
-Tabclock:AddButton({
-	Name = "Evening",
-	Callback = function()
-      		game.Lighting.ClockTime = 18
-  	end    
-})
-
-Tabclock:AddParagraph("Clock time","Only you can see night/morning/evening")
-
---tabtt
-local Tabc = Window:MakeTab({
-	Name = "Changelog",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
---text
-Tabc:AddParagraph("v2","ladder breaker got gui, teleport btn, scripts")
-Tabc:AddParagraph("v2.1","added: teleport buttons in main tab")
-Tabc:AddParagraph("v2.2","fixed teleport glitches, deleted server tab, added anti-admin tab and functions")
-Tabc:AddParagraph("v2.3","added: faster breaking ladder, invis breaking (need systembroken), deleted two anti-admin functions (not working)")
-Tabc:AddParagraph("v2.4","added: teleport tab")
-Tabc:AddParagraph("v2.5","added: breaking speed changer, time changer, beta tab")
-Tabc:AddParagraph("v2.6","deleted beta tab, added warning")
-Tabc:AddParagraph("v3 soon...","spoiler: new gui, new breaking-ladder script (break FULL ladder)")
---tab 6
-local Tab6 = Window:MakeTab({
-	Name = "Other",
-        Image = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
---section
-local Section = Tab6:AddSection({
-	Name = "ENG"
-})
---text
-Tab6:AddParagraph("Discord","m1kpee")
-Tab6:AddParagraph("Roblox","@Yaros1979 (m1kpee)")
-Tab6:AddParagraph("why are the sliders not working?","Idk, maybe they will work if you run this script on a computer, lol")
-Tab6:AddParagraph("Source","obfuscated")
---section
-local Section = Tab6:AddSection({
-	Name = "RUS"
-})
---text
-Tab6:AddParagraph("Дискорд","m1kpee")
-Tab6:AddParagraph("Роблокс","@Yaros1979 (m1kpee)")
-Tab6:AddParagraph("Почему слайдеры не работают?","Я не знаю, возможно, они будут работать, если запустить этот скрипт на компьютере, лол")
-Tab6:AddParagraph("Источник","зашифрован")
-
-OrionLib:Init()
