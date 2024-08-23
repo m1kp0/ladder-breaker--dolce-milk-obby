@@ -6,11 +6,6 @@ local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = fals
 _G.Key = "WhoeverReadIsGay"
 _G.KeyInput = "e"
 
-function makeLB()
-    	loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
-	wait(999999999)
-end
-
 function correctKeyNotify()
     OrionLib:MakeNotification({
         Name = "Correct key",
@@ -43,7 +38,7 @@ Tab:AddTextbox({
 		_G.KeyInput = Value
         if _G.KeyInput == _G.Key then
             correctKeyNotify()
-            makeLB()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
         else
             IncorrectKeyNotify()
         end
