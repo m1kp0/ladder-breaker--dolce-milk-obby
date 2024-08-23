@@ -3,7 +3,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = false, SaveConfig = true, IntroText = "LB - Welcome", ConfigFolder = "OrionTest"})
 
-_G.Key = ""
+_G.Key = "WhoeverReadIsGay"
 _G.KeyInput = "e"
 
 function makeLB()
