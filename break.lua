@@ -1,5 +1,3 @@
---v3 here
-
 --lib
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
@@ -12,7 +10,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-_G.Key = "WhoeverReadIsGay"
+_G.Key = "m1kpeeGotTheMoney"
 _G.KeyInput = "e"
 
 function makeLB()
@@ -58,15 +56,5 @@ Tab:AddTextbox({
 	end	  
 })
 
-Tab:AddParagraph("How to get key?","copy this link")
-
-Tab:AddTextbox({
-	Name = "link",
-	Default = "https://rutube.ru/video/51db7ad74132a0ca188191e0bbe6c006/",
-	TextDisappear = true,
-	Callback = function(Value)
-        print("how to get key???????????????????????????")
-	end	  
-})
 
 
