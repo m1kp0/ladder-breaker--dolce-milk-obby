@@ -3,13 +3,24 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = false, SaveConfig = true, IntroText = "LB - Welcome", ConfigFolder = "OrionTest"})
 
+OrionLib:MakeNotification({
+	Name = "Logged in",
+	Content = "You are logged in as "..Player.Name.."",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
 _G.Key = "WhoeverReadIsGay"
 _G.KeyInput = "e"
+
+function makeLB()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
+end
 
 function correctKeyNotify()
     OrionLib:MakeNotification({
         Name = "Correct key",
-        Content = "You are logged in as "..Player.Name.."",
+        Content = "Entered correct key!",
         Image = "rbxassetid://4483345998",
         Time = 5
     })
@@ -38,7 +49,7 @@ Tab:AddTextbox({
 		_G.KeyInput = Value
         if _G.KeyInput == _G.Key then
             correctKeyNotify()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
+            makeLB()
         else
             IncorrectKeyNotify()
         end
