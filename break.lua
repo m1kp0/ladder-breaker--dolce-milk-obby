@@ -6,6 +6,8 @@ local Window = OrionLib:MakeWindow({Name = "LB - Key System", HidePremium = fals
 _G.Key = "WhoeverReadIsGay"
 _G.KeyInput = "e"
 
+local link = "https://link-hub.net/1219995/key"
+
 function makeLB()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/scripts/main/ladder%20breaker%20-%20dmo.lua"))()
 end
@@ -36,7 +38,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddTextbox({
 	Name = "Enter key",
-	Default = "https://ify.ac/1M5f",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
 		_G.KeyInput = Value
@@ -49,5 +51,11 @@ Tab:AddTextbox({
 	end	  
 })
 
+Tab:AddButton({
+	Name = "Copy link",
+	Callback = function(Value)
+      setclipboard(tostring(link))
+  	end    
+})
 
-
+Tab:AddParagraph("linkversite?","the key on the linkversite! (Not changed)")
