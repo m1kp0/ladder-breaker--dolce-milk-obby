@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/break-ladder-dolcemilkobby/main/break.lua"))()
